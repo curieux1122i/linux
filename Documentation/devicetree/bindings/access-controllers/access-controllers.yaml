@@ -72,13 +72,9 @@ examples:
         #address-cells = <1>;
         #size-cells = <1>;
         ranges;
-        #access-controller-cells = <3>;
 
         uart4: serial@60100 {
             reg = <0x60100 0x400>;
             clocks = <&clk_serial>;
-            access-controllers = <&clock_controller 1 2>,
-                                 <&bus_controller 1 3 5>;
-            access-controller-names = "clock", "bus";
         };
     };
